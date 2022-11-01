@@ -28,7 +28,7 @@ function App() {
         .then(getUserData()) 
     }
 
-    const onCheckHandler = (event) => {
+    const onCheckHandler = (event) => { // 전체 회원의 아이디, 비밀번호와 입력된 비밀번호, 아이디를 비교하여 출력될 메세지를 결정.
         event.preventDefault();
         const id = event.target.id.value;
         const passwd = event.target.passwd.value; 
@@ -51,12 +51,12 @@ function App() {
             </div>
             <div>
                 <h2> 회원확인 </h2>
-                <form onSubmit={onCheckHandler}>
+                <form onSubmit={onCheckHandler}> //입력된 아이디와 비밀번호를 기반으로 버튼 클릭 시 onCheckHandler 함수를 실행.
                     <input type="text" name="id" placeholder="아이디" /> 
                     <input type="text" name="passwd" placeholder="암호" /> 
                     <button type="submit"> 확인 </button>
                 </form>
-                <h2>{text}</h2>
+                <h2>{text}</h2> //메세지 출력
             </div>
             <p></p>
             <div>
